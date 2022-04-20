@@ -36,11 +36,11 @@ let pokemonList = [
 },
 
 ];
-//add pokemon objects to array//
-//pokemonList=[pokemon001, pokemon002, pokemon003, pokemon004];
-
+;
+//for loop to iterate all Pokemon
 for (let i=0; i<pokemonList.length; i++){
   document.write("<h3 class=name>Name\: ", pokemonList[i].name, "</h3>");
+  //if statement to add comment about pokemon over 6 ft. need to research other options
   if (pokemonList[i].height > 6)
     {document.write("<p class=height>Height\: ",  pokemonList[i].height, "          Wow\, that is Big\!</p>")
 
