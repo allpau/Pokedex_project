@@ -1,5 +1,74 @@
 body {
 
   font-family: 'Fredoka', sans-serif;
-  display: block;
+  display:flex;
+  justify-content: center;
+}
+h3 {
+  color:rgba(0, 102, 255);
+  text-shadow: 1px 1px 3px #868383;
+
+  font-size: 30px ;
+
+}
+
+p {
+  font-size: 20px;
+  font-weight: 80;
+  line-height: 5px;
+}
+
+.height{
+  color:rgb(228, 17, 17);
+
+
+}
+
+.type{
+  color:rgb(6, 41, 240)
+
+}
+
+.weight{
+  color:rgb(30, 134, 4)
+
+}
+
+.number{
+  color: rgb(0, 0, 0);
+}
+
+.grass{
+  color: rgb(30, 134, 4);
+}
+
+#poison{
+  color:rgb(149, 57, 235)
+}
+
+.number{
+  color:rgb(0, 0, 0)
+}
+
+
+
+
+@media only screen and (max-width: 300px) {
+  body {
+    background-color: lightblue;
+  }
+    h3 {
+
+      text-shadow: 1px 1px 3px #868383;
+
+      font-size: 15px ;
+
+    }
+
+    p {
+      font-size: 10px;
+      font-weight: 50;
+      line-height: 1px;
+    }
+  }
 }
