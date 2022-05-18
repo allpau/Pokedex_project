@@ -1,4 +1,3 @@
-//create array of pokemon//
 let pokemonRepository = (function () {
   let pokemonList =[
 
@@ -51,31 +50,6 @@ let pokemonRepository = (function () {
     getAll: getAll
   };
 })();
-  //for loop to iterate all Pokemon
-  //for (let i=0; i<pokemonList.length; i++){
-   // document.write("<h3 class=name>Name\: ", pokemonList[i].name, "</h3>");
-    //if statement to add comment about pokemon over 6 ft. need to research other options
-    //if (pokemonList[i].height > 6)
-      //{document.write("<p class=height>Height\: ",  pokemonList[i].height, "          Wow\, that is Big\!</p>")
-
-     // } else{document.write("<p class=height>Height\: ", pokemonList[i].height, " </p>")
-
-   // }
-    //document.write("<p class=type>Type\: ", pokemonList[i].type, " </p>")
-    //document.write("<p class=weight>Weight\: ",  pokemonList[i].weight, " </p>")
-    //document.write("<p class=number>Number\: ", pokemonList[i].number, " </p>")
-  //}
 
 
-     function myLoopFunction(pokemon) {
-      newFunction();
-      document.writeln(pokemonRepository.name +  ' Height\: ', + pokemonRepository.height  );
-      document.writeln(' Type\: ', pokemonRepository.type);
-      document.writeln('Weight\: ', + pokemonRepository.weight);
-      document.writeln('Number\: ', + pokemonRepository.number);
-
-       function newFunction() {
-         document.writeln(pokemonRepository.getAll());
-       }
-    }
-    pokemonpokemonRepository.forEach(myLoopFunction);
+document.write(pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
