@@ -45,37 +45,25 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function addListItem(pokemon){
-    let pokemonList = document.querySelector('.pokemon-list');
-    let listOfPokemon = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('button-class');
-    listOfPokemon.appendChild(button);
-    pokemonList.appendChild(listOfPokemon);
-    button.addEventListener('click', showDetails);
-    };
-
-    function showDetails(pokemon){
-      console.log(pokemon);
-
-  }
-
-
-
-
   return {
     add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    showDetails: showDetails
+    getAll: getAll
   };
 })();
 
-console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write("<h3 class=name>Name\: ", pokemon.name, "</h3>");
+  //if statement to add comment about pokemon over 6 ft. need to research other options
+  if (pokemon.height > 6)
+    {document.write("<p class=height>Height\: ",  pokemon.height, "          Wow\, that is Big\!</p>")
 
-  pokemonRepository.addListItem(pokemon);
+    } else{document.write("<p class=height>Height\: ", pokemon.height, " </p>")
 
+  }
+  document.write("<p class=type>Type\: ", pokemon.type, " </p>")
+  document.write("<p class=weight>Weight\: ",  pokemon.weight, " </p>")
+  document.write("<p class=number>Number\: ", pokemon.number, " </p>");
 });
+
+//test

@@ -45,37 +45,11 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function addListItem(pokemon){
-    let pokemonList = document.querySelector('.pokemon-list');
-    let listOfPokemon = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('button-class');
-    listOfPokemon.appendChild(button);
-    pokemonList.appendChild(listOfPokemon);
-    button.addEventListener('click', showDetails);
-    };
-
-    function showDetails(pokemon){
-      console.log(pokemon);
-
-  }
-
-
-
-
   return {
     add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    showDetails: showDetails
+    getAll: getAll
   };
 })();
 
-console.log(pokemonRepository.getAll());
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-
-  pokemonRepository.addListItem(pokemon);
-
-});
+document.write(pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
