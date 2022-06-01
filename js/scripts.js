@@ -1,3 +1,4 @@
+//IIFE wrapper//
 let pokemonRepository = (function () {
   let pokemonList =[
 
@@ -37,14 +38,17 @@ let pokemonRepository = (function () {
   },
 
   ];
+  //add pokemon to list//
   function add(pokemon) {
     pokemonList.push(pokemon);
   }
 
+
+  //retreive all pokemon and their data//
   function getAll() {
     return pokemonList;
   }
-
+//add list items, create buttons, and show individual pokemon data//
   function addListItem(pokemon){
     let pokemonList = document.querySelector('.pokemon-list');
     let listOfPokemon = document.createElement('li');
@@ -53,10 +57,12 @@ let pokemonRepository = (function () {
     button.classList.add('button-class');
     listOfPokemon.appendChild(button);
     pokemonList.appendChild(listOfPokemon);
-    button.addEventListener('click', showDetails);
-    };
+    button.addEventListener('click', function (event) {
+      showDetails(pokemon)
+    });
+    }
 
-    function showDetails(pokemon){
+    function showDetails(pokemon) {
       console.log(pokemon);
 
   }
@@ -72,10 +78,14 @@ let pokemonRepository = (function () {
   };
 })();
 
-console.log(pokemonRepository.getAll());
+//console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function(pokemon) {
 
   pokemonRepository.addListItem(pokemon);
+
+
+
+
 
 });
